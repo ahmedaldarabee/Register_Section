@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    text-transform: capitalize;
+    background-color: #DDD;
+}
+
+.container {            
+    width: 300px;
+    height: 400px;
+    
+    padding: 10px;
+    margin: 30px auto;
+    
+    display: grid;
+
+    background-color: #ddd;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+
+    border-radius:10px;
+
+    position: relative;
+
+    box-shadow:
+      13px 13px 20px #cbced1,
+     -13px -13px 20px white;
+
+     cursor: pointer;
+
+     transition: all 0.5s ease-in-out;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .logo {
+    grid-column: 2 / span 1;
+    background-color: #444;
+    border-radius: 50%;
+
+    width: 80px;
+    height: 80px;
+
+    position: absolute;
+    top: 7%;
+    left: 15%;
+
+    box-shadow: 
+    0 0 2px #5f5f5f,
+    0 0 5px #f0edf1,
+    8px 8px 15px #a7aaaf,
+    -8px -8px 15px white
+    ;
+
+}
+
+.container .logo i {
+    font-size: 50px;
+}
+
+.container .org-name {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+    position: relative;
+    top:-20px;
+}
+
+.container .org-name h4 {
+    font-family:'Madimi One',sans-serif;
+    position: absolute;
+    top: 10px;
+}
+
+.container .login-info {
+    grid-row: 3 / span 3;
+    grid-column: 1 / span 3;
+    
+    position: relative;
+    top: 25px;
+
+}
+.container .login-info input {
+    outline: none;
+
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container .login-info input[type='email'],
+.container .login-info input[type='password'],
+.container .login-info input[type='text'] {
+   
+    border: none;
+    background: transparent;
+
+    box-shadow:
+    8px 8px 8px #cbced1 inset,
+    -2px -6px 8px white inset
+    ;
+}
+
+.container .login-info input[type='text']:nth-child(2){
+    position: absolute;
+    top:-60%;
+    left: 15%;
+}
+
+.container .login-info input[type='text'] {            
+    position: absolute;
+    top:-30%;
+    left: 15%;
+}
+
+.container .login-info input[type='email'] {            
+    position: absolute;
+    left: 15%;
+}
+
+.container .login-info input[type='password'] {
+    position: absolute;
+    left: 15%;
+    top: 30%;
+}
+
+.container .login-info input[type='submit'] {
+    position: absolute;
+    left: 15%;
+    top: 60%;
+
+    width: 185px;
+    font-weight: bold;
+    color: #222;
+
+    box-shadow: 
+    5px 5px 10px #b1b1b1,
+    -5px -5px 10px white;
+
+    border: none;
+    background-color: #444;
+    color:white;
+}
+.container .login-info input[type='submit']:hover {
+    box-shadow: 0 5px 20px 2px  #b1b1b1;
+}
+
+.container .login-info i {
+    z-index: 3;
+    color: #fcbc04;
+}
+
+
+.container .login-info .fa-user {
+    position: absolute;
+    left: 72%;
+    top: -55%;
+}
+
+.container .login-info .fa-address-book {
+    position: absolute;
+    left: 72%;
+    top: -25%;
+}
+
+.container .login-info .fa-lock {
+    position: absolute;
+    left: 72%;
+    top: 5%;
+}
+
+.container .login-info .fa-envelope {
+    position: absolute;
+    left: 72%;
+    top: 35%;
+}
+
+.container .login-info input::placeholder {
+    font-size: 12px;
+}
